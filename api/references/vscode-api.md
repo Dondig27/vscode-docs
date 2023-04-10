@@ -910,7 +910,7 @@ greater than zero mean the selector matches the document.</p>
 <p>Samples:</p>
 
 <pre><code class="lang-js">// default document from disk (file-scheme)
-doc.uri; //&#39;file:///my/file.js&#39;
+doc.uri; //&#39;file:///my/&#39;
 doc.languageId; // &#39;javascript&#39;
 match(&#39;javascript&#39;, doc); // 10;
 match({language: &#39;javascript&#39;}, doc); // 10;
@@ -920,7 +920,7 @@ match(&#39;fooLang&#39;, doc); // 0
 match([&#39;fooLang&#39;, &#39;*&#39;], doc); // 5
 
 // virtual document, e.g. from git-index
-doc.uri; // &#39;git:/my/file.js&#39;
+doc.uri; // &#39;git:/my/&#39;
 doc.languageId; // &#39;javascript&#39;
 match(&#39;javascript&#39;, doc); // 10;
 match({language: &#39;javascript&#39;, scheme: &#39;git&#39;}, doc); // 10;
